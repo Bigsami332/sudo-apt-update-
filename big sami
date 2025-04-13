@@ -1,0 +1,15 @@
+sudo apt update udo apt upgrade -y
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+source ~/.bashrc
+
+curl -sSL raw.githubusercontent.com/soundnesslabs/soundness-layer/main/soundnessup/install | bash
+
+source ~/.bashrc
+
+soundnessup install
+
+soundness-cli generate-key --name my-key
+
+soundness-cli export-key --name my-key
